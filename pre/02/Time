@@ -1,0 +1,10 @@
+public class Time{
+      public static void main(String[] args){
+        int hour = 17;
+        int minute = 01;
+        int second = 44;
+        double daysf = (hour * 360 + minute * 60 + second);
+        double dayr = (24.0 * 360.0 - daysf);
+        System.out.println(daysf / (24.0 * 360.0) * 100.0);
+}
+}
