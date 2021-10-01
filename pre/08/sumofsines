@@ -1,0 +1,20 @@
+public double sumOfSines(double t){
+  double valueUno = Math.sin(2*t/ 180.0 * Math.PI);
+  double valueDos = Math.sin(3*t/ 180.0 * Math.PI);
+  double sumOfValues = valueUno + valueDos;
+  double roundedSumOfValues = Math.round(sumOfValues*1000.0)/1000.0;
+  return roundedSumOfValues;
+}
+oddsarenegated:
+public int oddsAreNegated(int x){
+  if (x % 2 == 1)
+  return -1x;
+
+  if (x % 2 == -1)
+  return -1x;
+
+  else {
+  return x;
+
+  }
+}
