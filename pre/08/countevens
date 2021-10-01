@@ -1,0 +1,8 @@
+public int countEvens(int[] nums) {
+int even = 0;
+  for (int counter=0; counter < nums.length; counter = counter + 1) {
+  if (nums[counter] % 2 == 0)
+  even = even + 1;
+  }
+  return even;
+     }
