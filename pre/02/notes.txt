@@ -1,1 +1,17 @@
+public class Date{
+      public static void main(String[] args){
+      String month = "September,";
+      int day = 11;
+      int year = 2021;
+      int hour = 4;
+      int minute = 44;
+      System.out.print("The current date is ");
+      System.out.print(day);
+      System.out.print(",");
+      System.out.print(month);
+      System.out.print(",");
+      System.out.print(year);
+      System.out.println(".");
+    }
+  }
 
