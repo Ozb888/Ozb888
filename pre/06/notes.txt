@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class Loops {
+
+    public static void powerto(int x , int n) {
+        int ans = 1;
+        while (n != 0) {
+            ans = ans * x;
+          n = n - 1;
+        }
+        System.out.println(ans);
+  }
+    public static int factorialto(int c) {
+        int ans2 = 1;
+        for(int t = 1; t <= c; t++)
+        {
+            ans2 = ans2 * t;
+        }
+        return ans2;
+  }
+    public static double myexpto(int eulerp , int nume) {
+        double euler = 0.0;
+        int exp1 = 2;
+        int c = 2;
+        while (nume != 0) {
+          euler = euler + Math.pow(eulerp, exp1) / factorialto(c);
+          exp1 = exp1 + 1;
+          c = c + 1;
+          nume = nume - 1;
+        }
+        euler = euler +(1 + eulerp);
+        return euler;
+  }
+
+  public static void check(int eulerp, int nume) {
+    Scanner in = new Scanner(System.in);
+    System.out.println(eulerp+"\t "+ myexpto(eulerp ,nume)+ "\t "+ Math.exp(eulerp) );
+  }
+  public static void myexpchoice() {
+    Scanner in = new Scanner(System.in);
+    System.out.println("to what power?");
+    int eulerp = in.nextInt();
+    System.out.println("how many terms?");
+    int nume = in.nextInt();
+    myexpto(eulerp, nume);
+    check(eulerp, nume);
+  }
+
+
+  public static void factorialschoice() {
+    Scanner in = new Scanner(System.in);
+    System.out.println( "what digit?");
+    int c = in.nextInt();
+    factorialto(c);
+    System.out.println(factorialto(c));
+}
+  public static void powerchoice() {
+    Scanner in = new Scanner(System.in);
+    System.out.println( "whats the base?");
+    int x = in.nextInt();
+    Scanner thn = new Scanner(System.in);
+    System.out.println( "whats the exponent?");
+    int n = thn.nextInt();
+    powerto(x , n);
+}
+public static void main(String[] args){
+   Scanner in = new Scanner(System.in);
+   System.out.println( "factorial, 1, or power, 2, or euler exponent,3?");
+   int h = in.nextInt();
+   if ( h == 2 ){
+     powerchoice();
+   }
+    if (h == 1) {
+     factorialschoice();
+   }
+   if (h == 3) {
+     myexpchoice();
+   }
+
+}
+}
